@@ -1,8 +1,8 @@
 import React from 'react'
 
-const NavBar = ({children}) => {
+const NavBar = ({children , className}) => {
   return (
-    <ul>
+    <ul className={className}> 
         {children}
     </ul>
   )

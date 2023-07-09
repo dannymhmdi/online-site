@@ -1,0 +1,15 @@
+header{
+    border: 3px solid green;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
+}
+
+nav {
+    /* border: 1px solid red; */
+    /* position: absolute; */
+    /* top:100%; */
+    /* left: 100%; */
+}

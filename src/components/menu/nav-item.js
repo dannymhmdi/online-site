@@ -1,8 +1,8 @@
 import React from 'react'
 
-const NavItem = ({children}) => {
+const NavItem = ({children , className}) => {
   return (
-    <li>{children}</li>
+    <li className={className}>{children}</li>
   )
 }
 
