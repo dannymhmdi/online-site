@@ -1,19 +1,21 @@
 import styles from "./header.module.css";
 import { Nav, NavBar, NavItem } from "../menu";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 const Header = () => {
   const [isShowMenu, setIsShowMenu] = useState(false);
 
   const hamMenuHandler = () => {
-    setIsShowMenu(!isShowMenu)
-    console.log('hammenu clicked')
-  }
+    setIsShowMenu(!isShowMenu);
+    console.log("hammenu clicked");
+  };
 
   return (
     // <BasePage fluid={true} style={{padding:'0'}} >
     <header>
-      <div className={styles['ham-menu-box']}>
+      <div className={styles["ham-menu-box"]}>
         <span
           className={`${styles["material-symbols-outlined"]} material-symbols-outlined`}
           onClick={hamMenuHandler}
@@ -21,24 +23,45 @@ const Header = () => {
           menu
         </span>
       </div>
-      <Nav className={isShowMenu ? styles['show-menu'] : styles['hide-menu']}>
+      <Nav className={isShowMenu ? styles["show-menu"] : styles["hide-menu"]}>
         <NavBar className={styles["nav-bar"]}>
           <NavItem>
-            <NavLink to={"/"}> خانه</NavLink>
+            <NavLink to={"/"}>
+              <span class="material-symbols-outlined">home</span> 
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to={"/دانلود-فیلم"}> دانلود فیلم</NavLink>
+            <NavLink to={"/دانلود-فیلم"}>  محصولات</NavLink>
           </NavItem>
           <NavItem>
             <NavLink to={"/تماس-با-ما"}> تماس با ما</NavLink>
           </NavItem>
         </NavBar>
       </Nav>
-      <div style={{ padding: "10px" }}>
-        <img
-          src="https://www.banimode.com//themes/new/assets/images/banilogo.svg"
-          alt=""
-        />
+      <div
+        style={{
+          padding: "15px",
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+        }}
+      >
+        <span
+          className={`material-symbols-outlined position-relative ${styles["shopping-icon"]}`}
+        >
+          shopping_cart{" "}
+          <span
+            className={`badge bg-success rounded-5 position-absolute top-0 translate-middle ${styles["shop-badge"]}`}
+          >
+            4
+          </span>
+        </span>
+        <Link to={"/"}>
+          <img
+            src="https://www.banimode.com//themes/new/assets/images/banilogo.svg"
+            alt=""
+          />
+        </Link>
       </div>
     </header>
     // </BasePage>
