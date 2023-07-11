@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import BasePage from "../components/base-page/base-page";
+import Carousel from "../components/carousel/carousel";
+
 
 const Home = () => {
   return (
-    <div><h3>Home</h3></div>
-  )
-}
+    <BasePage fluid={false} title={'صفحه اصلی'}>
+      <div>
+       <Carousel></Carousel>
+      </div>
+    </BasePage>
+  );
+};
 
-export default Home
+export default Home;

@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import BasePage from "../components/base-page/base-page";
 
 const FilmDownload = () => {
   return (
-    <div>FilmDownload</div>
-  )
-}
+    <BasePage fluid={false} title={'دانلود فیلم'}>
+      <div>
+        <h3>FilmDownload</h3>
+      </div>
+    </BasePage>
+  );
+};
 
-export default FilmDownload
+export default FilmDownload;
