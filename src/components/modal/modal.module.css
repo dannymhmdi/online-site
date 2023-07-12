@@ -1,0 +1,12 @@
+/* .modal > div{
+    border: 3px solid red;
+    width: 100% !important;
+}
+.modal > div > div{
+    border: 2px solid blue;
+    width: 100% !important;
+} */
+
+.filter-icon:hover{
+    background-color: #bebdbd;
+}
