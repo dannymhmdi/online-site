@@ -27,7 +27,7 @@ const Header = () => {
         <NavBar className={styles["nav-bar"]}>
           <NavItem>
             <NavLink to={"/"}>
-              <span class="material-symbols-outlined">home</span> 
+              <span className="material-symbols-outlined">home</span> 
             </NavLink>
           </NavItem>
           <NavItem>
@@ -51,7 +51,7 @@ const Header = () => {
         >
           shopping_cart{" "}
           <span
-            className={`badge bg-success rounded-5 position-absolute top-0 translate-middle ${styles["shop-badge"]}`}
+            className={`badge bg-success rounded-5 ${styles["shop-badge"]}`}
           >
             4
           </span>
