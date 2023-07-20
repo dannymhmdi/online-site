@@ -26,15 +26,15 @@ const Header = () => {
       <Nav className={isShowMenu ? styles["show-menu"] : styles["hide-menu"]}>
         <NavBar className={styles["nav-bar"]}>
           <NavItem>
-            <NavLink to={"/"}>
+            <NavLink to={"/"} className={styles['nav-link']}>
               <span className="material-symbols-outlined">home</span> 
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to={"/دانلود-فیلم"}>  محصولات</NavLink>
+            <NavLink to={"/products"} className={styles['nav-link']}>  محصولات</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to={"/تماس-با-ما"}> تماس با ما</NavLink>
+            <NavLink to={"/contact-us"} className={styles['nav-link']}> تماس با ما</NavLink>
           </NavItem>
         </NavBar>
       </Nav>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "../../../node_modules/react-bootstrap/Button";
 import Modal from "../../../node_modules/react-bootstrap/Modal";
+import { Form } from "react-bootstrap";
 import styles from "./modal.module.css";
 const ModalPart = () => {
   const [fullscreen, setFullscreen] = useState(true);
@@ -21,10 +22,14 @@ const ModalPart = () => {
           backgroundColor: "transparent",
           color: "black",
         }}
-        /* مشخص میکند که از چه سایزی به پایین فول اسکرین شودhandleshowپارامتر داخل فانکشن */ 
-        onClick={() => handleShow('lg-down')}
+        /* مشخص میکند که از چه سایزی به پایین فول اسکرین شودhandleshowپارامتر داخل فانکشن */
+        onClick={() => handleShow("lg-down")}
       >
-        <span className={`material-symbols-outlined pe-2 py-2 rounded-2 ${styles['filter-icon']}`}>tune</span>
+        <span
+          className={`material-symbols-outlined pe-2 py-2 rounded-2 ${styles["filter-icon"]}`}
+        >
+          tune
+        </span>
         <p className="py-2">فیلتر</p>
       </Button>
       <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
@@ -32,7 +37,16 @@ const ModalPart = () => {
           <Modal.Title>فیلتر محصولات</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            
+          <Form>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="name@example.com"
+                autoFocus
+              />
+            </Form.Group>
+          </Form>
         </Modal.Body>
       </Modal>
     </>

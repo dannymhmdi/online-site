@@ -40,6 +40,11 @@ nav {
   background-color: #e9e9e9;
 }
 
+.nav-link:global.active {
+  border-bottom: 1px solid rgb(0, 191, 111);
+  color: rgb(0, 191, 111) !important;
+}
+
 .material-symbols-outlined {
   margin: 15px;
   font-size: 30px !important;
@@ -67,19 +72,19 @@ nav {
   padding: 5px;
   border-radius: 8px;
   margin-left: 6px;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
   cursor: pointer;
   /* border: 1px solid; */
 }
 
-.shop-badge{
-    font-size: 14px !important;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    position: absolute;
-    transform: translate(-50%,-50%);
+.shop-badge {
+  font-size: 14px !important;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
-.shopping-icon:hover{
-    background-color:#bebdbd ;
+.shopping-icon:hover {
+  background-color: #bebdbd;
 }
 
 @media screen and (min-width: 576px) {
