@@ -1,0 +1,9 @@
+.grid-container{
+    justify-content: stretch !important;
+    align-items: stretch !important;
+}
+.grid-item{
+    align-self: stretch !important;
+    justify-self: stretch !important;
+    height: 100% !important;
+}
