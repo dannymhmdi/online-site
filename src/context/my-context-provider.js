@@ -8,7 +8,7 @@ import { myReducer } from "./my-reducer";
 const MyContextProvider = ({ children }) => {
   const MyContext = createContext();
 
-  const [state, dispatch] = useReducer(myReducer, { shopBasket: [] });
+  const [state, dispatch] = useReducer(myReducer, { shopBasket: [] ,name:'hello context'});
   return (
     <MyContext.Provider value={{ state, dispatch }}>
       {children}

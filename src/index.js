@@ -3,15 +3,18 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "../node_modules/bootstrap/dist/css/bootstrap.rtl.min.css"
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min";
 import { HelmetProvider } from "react-helmet-async";
+import MyContextProvider from "./context/my-context-provider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <HelmetProvider>
-      <App />
+      <MyContextProvider>
+        <App/>
+      </MyContextProvider>
     </HelmetProvider>
   </React.StrictMode>
 );

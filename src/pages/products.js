@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useContext, useEffect, useState } from "react";
 import BasePage from "../components/base-page/base-page";
 import Carousel from "../components/carousel/carousel";
 import { ModalTest } from "../components/modal";
@@ -27,6 +27,7 @@ const Products = () => {
     }
   }, [isLoading]);
   // console.log(products)
+  const myContext = useContext()
   return (
     <Fragment>
       <BasePage fluid={false} title={"محصولات"}>
