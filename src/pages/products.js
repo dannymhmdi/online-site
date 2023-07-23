@@ -9,15 +9,11 @@ import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import { Button } from "react-bootstrap";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { MyContext } from "../context/my-context-provider";
 const Products = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [products, setProducts] = useState([]);
-  const shopBasket = [];
-  const buyButtonHandler = (shoe) => {
-    shopBasket.push(shoe)
-    console.log('shoe=',shoe)
-    console.log('shopBasket=',shopBasket)
-  };
+
   useEffect(() => {
     if (isLoading) {
       axios.get("http://localhost:3001/products").then((res) => {
@@ -26,8 +22,14 @@ const Products = () => {
       });
     }
   }, [isLoading]);
-  // console.log(products)
-  const myContext = useContext()
+
+  const { state ,dispatch} = useContext(MyContext);
+
+ 
+  // const myContext = useContext(MyContext)
+  console.log("state", state);
+
+
   return (
     <Fragment>
       <BasePage fluid={false} title={"محصولات"}>
@@ -41,7 +43,8 @@ const Products = () => {
           <Row>
             {products.map((card) => {
               return (
-                <Card key={card.id}
+                <Card
+                  key={card.id}
                   className="border-0 col-sm-4 col-md-3 px-1 py-1"
                   style={{ cursor: "pointer" }}
                 >
@@ -55,7 +58,12 @@ const Products = () => {
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer className="bg-transparent border-0">
-                    <Button variant="success d-flex" onClick={() => buyButtonHandler(card)}>
+                    <Button
+                      variant="success d-flex"
+                      onClick={() =>
+                        dispatch({ type: "add to cart", payLoad: card })
+                      }
+                    >
                       اضافه کردن به سبد خرید
                       <span className="material-symbols-outlined p-1">
                         add_shopping_cart
@@ -68,7 +76,7 @@ const Products = () => {
           </Row>
         </ModalTest>
       </BasePage>
-      <h3>image test</h3>
+      <h3>{state.name}</h3>
       {isLoading && <Loading />}
     </Fragment>
   );

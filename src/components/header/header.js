@@ -2,16 +2,26 @@ import styles from "./header.module.css";
 import { Nav, NavBar, NavItem } from "../menu";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { MyContext } from "../../context/my-context-provider";
 const Header = () => {
   const [isShowMenu, setIsShowMenu] = useState(false);
+
 
   const hamMenuHandler = () => {
     setIsShowMenu(!isShowMenu);
     console.log("hammenu clicked");
   };
 
+  const { state } = useContext(MyContext);
+
+  // useEffect(() => {
+  //  setProducts(state.shopBasket)
+  // //  console.log('products in header',products)
+
+  // },[state])
+console.log('ss',state)
   return (
     // <BasePage fluid={true} style={{padding:'0'}} >
     <header>
@@ -26,15 +36,21 @@ const Header = () => {
       <Nav className={isShowMenu ? styles["show-menu"] : styles["hide-menu"]}>
         <NavBar className={styles["nav-bar"]}>
           <NavItem>
-            <NavLink to={"/"} className={styles['nav-link']}>
-              <span className="material-symbols-outlined">home</span> 
+            <NavLink to={"/"} className={styles["nav-link"]}>
+              <span className="material-symbols-outlined">home</span>
             </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to={"/products"} className={styles['nav-link']}>  محصولات</NavLink>
+            <NavLink to={"/products"} className={styles["nav-link"]}>
+              {" "}
+              محصولات
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink to={"/contact-us"} className={styles['nav-link']}> تماس با ما</NavLink>
+            <NavLink to={"/contact-us"} className={styles["nav-link"]}>
+              {" "}
+              تماس با ما
+            </NavLink>
           </NavItem>
         </NavBar>
       </Nav>
@@ -53,7 +69,7 @@ const Header = () => {
           <span
             className={`badge bg-success rounded-5 ${styles["shop-badge"]}`}
           >
-            4
+            {state.shopBasket.length === 0 ? '' : state.shopBasket.length}
           </span>
         </span>
         <Link to={"/"}>
