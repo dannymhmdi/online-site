@@ -13,24 +13,31 @@ import { MyContext } from "../context/my-context-provider";
 import { PaginationBootstrap } from "../components/pagination";
 
 
-const Products = () => {
+const Products = ({onPagination}) => {
   const [isLoading, setIsLoading] = useState(true);
   const [products, setProducts] = useState([]);
   const [totalItem , setTotalItem] = useState(null)
+  const [currentPageProducts , setCurrentPageProducts] = useState(1)
+
+  const onPaginateHandler = (pageNo) => {
+   setCurrentPageProducts(pageNo)
+   setIsLoading(true)
+  }
+
   useEffect(() => {
     if (isLoading) {
-      axios.get("http://localhost:3001/products?_page=1&_limit=6").then((res) => {
+      axios.get(`http://localhost:3001/products?_page=${currentPageProducts}&_limit=8`).then((res) => {
         setProducts(res.data);
         setIsLoading(false);
         setTotalItem(res.headers['x-total-count'])
         console.log(res)
       });
     }
-  }, [isLoading]);
+  }, [isLoading,currentPageProducts]);
 
   const { state ,dispatch} = useContext(MyContext);
 
- 
+ console.log('currentPageProducts=',currentPageProducts)
   // console.log("state", state);
 
 
@@ -82,7 +89,7 @@ const Products = () => {
       </BasePage>
       <h3>{state.name}</h3>
       {isLoading && <Loading />}
-      <PaginationBootstrap totalItem={totalItem} pageSize={6}/>
+      <PaginationBootstrap totalItem={totalItem} pageSize={6} onPaginate={onPaginateHandler}/>
     </Fragment>
   );
 };

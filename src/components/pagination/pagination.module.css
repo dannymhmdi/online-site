@@ -1,6 +1,7 @@
 .pagination{
     direction: ltr;
     padding: 5px 16px;
+    justify-content: center;
 }
 
 
