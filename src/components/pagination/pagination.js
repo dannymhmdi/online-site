@@ -24,15 +24,31 @@ const PaginationBootstrap = ({ pageSize, totalItem }) => {
     );
   }
 
+  const onFirstPageHandler = () => {
+    setCurrentPage(1)
+  } 
+
+  const onPreviousPageHandler = () => {
+    setCurrentPage(currentPage - 1)
+  }
+
+  const onNextPageHandler = () => {
+    setCurrentPage(currentPage + 1 )
+  }
+
+  const onLastPageHandler =  () => {
+   setCurrentPage(totalPages)
+  }
+
   return (
     <Pagination className={`${styles["pagination"]}`}>
-      <Pagination.First className={`me-1  ${styles['pagination-item']}`} disabled={currentPage === 1} />
-      <Pagination.Prev className={`me-1  ${styles['pagination-item']}`} disabled={currentPage === 1} />
+      <Pagination.First onClick={onFirstPageHandler} className={`me-1  ${styles['pagination-item']}`} disabled={currentPage === 1} />
+      <Pagination.Prev onClick={onPreviousPageHandler} className={`me-1  ${styles['pagination-item']}`} disabled={currentPage === 1} />
       {/* <Pagination.Ellipsis /> */}
       {paginationButtons}
       {/* <Pagination.Item active>{12}</Pagination.Item> */}
-      <Pagination.Next className={`me-1  ${styles['pagination-item']}`} disabled={currentPage === totalPages} />
-      <Pagination.Last className={`me-1  ${styles['pagination-item']}`} disabled={currentPage === totalPages} />
+      <Pagination.Next onClick={onNextPageHandler} className={`me-1  ${styles['pagination-item']}`} disabled={currentPage === totalPages} />
+      <Pagination.Last onClick={onLastPageHandler} className={`me-1  ${styles['pagination-item']}`} disabled={currentPage === totalPages} />
     </Pagination>
   );
 };
