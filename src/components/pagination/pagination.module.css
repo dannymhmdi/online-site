@@ -1,0 +1,16 @@
+.pagination{
+    direction: ltr;
+    padding: 5px 16px;
+}
+
+
+.pagination-item a{
+    color: rgb(0, 191, 111) !important;
+    background-color: #fff !important;
+}
+
+.pagination-item:global.active > *{
+  background-color: rgb(0, 191, 111) !important;
+  color: #fff !important;
+  border: 1px solid rgb(0, 191, 111) ;
+}
