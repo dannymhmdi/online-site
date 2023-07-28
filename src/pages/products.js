@@ -19,7 +19,7 @@ const Products = () => {
   const [totalItem , setTotalItem] = useState(null)
   useEffect(() => {
     if (isLoading) {
-      axios.get("http://localhost:3001/products?_page=1").then((res) => {
+      axios.get("http://localhost:3001/products?_page=1&_limit=6").then((res) => {
         setProducts(res.data);
         setIsLoading(false);
         setTotalItem(res.headers['x-total-count'])
