@@ -87,6 +87,62 @@
       "category": "shoe",
       "model": "Nike Dunk Low Retro-2",
       "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0dc8ed4e-799d-4466-b31c-3d45a14496de/dunk-low-retro-mens-shoes-SSbL97.png"
+    },
+    {
+      "id": 12,
+      "brand": "Nike",
+      "price": "160$",
+      "category": "shoe",
+      "model": "Nike InfinityRN 4",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4e04c39c-70ee-40ef-a3eb-651d59bf7fe6/infinityrn-4-womens-road-running-shoes-N65CDx.png"
+    },
+    {
+      "id": 13,
+      "brand": "Nike",
+      "price": "180$",
+      "category": "shoe",
+      "model": "Nike Invincible 3",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/271884cc-ae38-469f-8298-1dee940c04d5/invincible-3-womens-road-running-shoes-M4VNQK.png"
+    },
+    {
+      "id": 14,
+      "brand": "Nike",
+      "price": "180$",
+      "category": "shoe",
+      "model": "Nike Invincible 3",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e9f8c612-0b6b-4e4e-aaf8-af0d8b88b40c/invincible-3-mens-road-running-shoes-Xrd0px.png"
+    },
+    {
+      "id": 15,
+      "brand": "Nike",
+      "price": "110$",
+      "category": "shoe",
+      "model": "Nike Motiva",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5d5fb2e3-fe48-488c-acad-9b922f47cba2/motiva-mens-walking-shoes-0vX49k.png"
+    },
+    {
+      "id": 16,
+      "brand": "Nike",
+      "price": "250$",
+      "category": "shoe",
+      "model": "Nike Vaporfly 3",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/05d326ed-b7b6-4981-9e35-fb5476fc00c8/vaporfly-3-womens-road-racing-shoes-KcmWJb.png"
+    },
+    {
+      "id": 17,
+      "brand": "Nike",
+      "price": "275$",
+      "category": "shoe",
+      "model": "Nike Alphafly 2",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/de5aee92-ed49-4bf7-85c3-7aa35b7cd511/alphafly-2-womens-road-racing-shoes-6grcms.png"
+    },
+    {
+      "id": 18,
+      "brand": "Nike",
+      "price": "140$",
+      "category": "shoe",
+      "model": "Nike React Pegasus Trail 4 SE",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/bfa8623c-acd0-4a8f-a3ec-51c74605947b/pegasus-trail-4-womens-trail-running-shoes-CQT261.png"
     }
   ],
   "users": []
