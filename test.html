@@ -21,29 +21,42 @@
 </head>
 
 <body class="background">
-  <script> 
-   let obj ={
-    firstName:'daniel',
-    lastName:'Safavi',
-    firstName:'Hesam'
-   }
+    <script>
+        let obj = {
+            firstName: 'daniel',
+            lastName: 'Safavi',
+            firstName: 'Hesam'
+        }
 
-   console.log('firstName',obj)
-   const fruits = ["Banana", "Orange", "Apple", "Mango"];
-//    fruits.push(...fruits)
-   console.log(fruits)
+        console.log('firstName', obj)
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let [first , second , ...rest] = fruits
+        //    fruits.push(...fruits)
+        console.log(...rest)
 
-   for (let fruit of fruits) {
-    if (fruit == 'Apple'){
-        // console.log('indexOf =',fruits.indexOf(fruit))
-        let name = fruits.indexOf(fruit);
-        document.write(name)
-    }
-   }
-   let name = 'how are you Daniel , is everything okay?'
-   console.log('include',name.includes('everything'))
+        for (let fruit of fruits) {
+            if (fruit == 'Apple') {
+                // console.log('indexOf =',fruits.indexOf(fruit))
+                let name = fruits.indexOf(fruit);
+                document.write(name)
+            }
+        }
+        let name = 'how are you Daniel , is everything okay?'
+        console.log('include', name.includes('everything'))
 
-  </script> 
+        const consoleTest = () => {
+          const name = 'hello goodman'
+       return () => {
+            console.log('name = ',name)
+          }
+         
+        }
+
+
+        consoleTest()
+
+
+    </script>
 </body>
 
 </html>

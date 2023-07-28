@@ -7,8 +7,8 @@ export const MyContext = createContext();
 
 const MyContextProvider = ({ children }) => {
 
-
-  const [state, dispatch] = useReducer(myReducer, {shopBasket:[] });
+const darkMode = `bg-dark text-white`
+  const [state, dispatch] = useReducer(myReducer, {shopBasket:[] ,theme:darkMode});
   return (
     <MyContext.Provider value={{ state , dispatch}}>
       {children}

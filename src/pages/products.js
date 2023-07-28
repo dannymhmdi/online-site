@@ -10,15 +10,20 @@ import Row from "react-bootstrap/Row";
 import { Button } from "react-bootstrap";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { MyContext } from "../context/my-context-provider";
+import { PaginationBootstrap } from "../components/pagination";
+
+
 const Products = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [products, setProducts] = useState([]);
-
+  const [totalItem , setTotalItem] = useState(null)
   useEffect(() => {
     if (isLoading) {
-      axios.get("http://localhost:3001/products").then((res) => {
+      axios.get("http://localhost:3001/products?_page=1").then((res) => {
         setProducts(res.data);
         setIsLoading(false);
+        setTotalItem(res.headers['x-total-count'])
+        console.log(res)
       });
     }
   }, [isLoading]);
@@ -26,8 +31,7 @@ const Products = () => {
   const { state ,dispatch} = useContext(MyContext);
 
  
-  // const myContext = useContext(MyContext)
-  console.log("state", state);
+  // console.log("state", state);
 
 
   return (
@@ -78,6 +82,7 @@ const Products = () => {
       </BasePage>
       <h3>{state.name}</h3>
       {isLoading && <Loading />}
+      <PaginationBootstrap totalItem={totalItem} pageSize={6}/>
     </Fragment>
   );
 };

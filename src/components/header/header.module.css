@@ -74,6 +74,7 @@ nav {
   margin-left: 6px;
   transition: all 0.2s linear;
   cursor: pointer;
+  text-decoration: none;
   /* border: 1px solid; */
 }
 

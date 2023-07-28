@@ -8,7 +8,6 @@ import { MyContext } from "../../context/my-context-provider";
 const Header = () => {
   const [isShowMenu, setIsShowMenu] = useState(false);
 
-
   const hamMenuHandler = () => {
     setIsShowMenu(!isShowMenu);
     console.log("hammenu clicked");
@@ -21,7 +20,7 @@ const Header = () => {
   // //  console.log('products in header',products)
 
   // },[state])
-console.log('ss',state)
+  console.log("ss", state);
   return (
     // <BasePage fluid={true} style={{padding:'0'}} >
     <header>
@@ -54,6 +53,7 @@ console.log('ss',state)
           </NavItem>
         </NavBar>
       </Nav>
+      
       <div
         style={{
           padding: "15px",
@@ -62,16 +62,16 @@ console.log('ss',state)
           flexWrap: "wrap",
         }}
       >
-        <span
-          className={`material-symbols-outlined position-relative ${styles["shopping-icon"]}`}
+        <NavLink to={'/shop-basket'}
+          className={`material-symbols-outlined position-relative text-dark ${styles["shopping-icon"]}`}
         >
           shopping_cart{" "}
           <span
             className={`badge bg-success rounded-5 ${styles["shop-badge"]}`}
           >
-            {state.shopBasket.length === 0 ? '' : state.shopBasket.length}
+            {state.shopBasket.length === 0 ? "" : state.shopBasket.length}
           </span>
-        </span>
+        </NavLink>
         <Link to={"/"}>
           <img
             src="https://www.banimode.com//themes/new/assets/images/banilogo.svg"
