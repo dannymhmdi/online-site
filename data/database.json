@@ -2,147 +2,327 @@
   "products": [
     {
       "id": 1,
-      "brand": "Nike",
+      "brand": "nike",
       "price": "100$",
       "category": "shoe",
       "model": "Air Jordan 7 Retro",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/72b6ad7a-6f1a-47c2-8c32-2f84de633712/air-jordan-7-retro-mens-shoes-7Zr804.png"
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/72b6ad7a-6f1a-47c2-8c32-2f84de633712/air-jordan-7-retro-mens-shoes-7Zr804.png",
+      "stock": "موجود در انبار"
     },
     {
       "id": 2,
-      "brand": "Nike",
+      "brand": "nike",
       "price": "100$",
       "category": "shoe",
-      "model": "Nike Air Force 1 '07 Next Nature",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c6d9d042-f0b9-46a3-bd1f-04e16541a1d9/air-force-1-07-next-nature-womens-shoes-fvxZ0g.png"
+      "model": "nike Air Force 1 '07 Next Nature",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c6d9d042-f0b9-46a3-bd1f-04e16541a1d9/air-force-1-07-next-nature-womens-shoes-fvxZ0g.png",
+      "stock": "موجود در انبار"
     },
     {
       "id": 3,
-      "brand": "Nike",
+      "brand": "nike",
       "price": "100$",
       "category": "shoe",
-      "model": "Nike Air Force 1 '07",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e6da41fa-1be4-4ce5-b89c-22be4f1f02d4/air-force-1-07-mens-shoes-jBrhbr.png"
+      "model": "nike Air Force 1 '07",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e6da41fa-1be4-4ce5-b89c-22be4f1f02d4/air-force-1-07-mens-shoes-jBrhbr.png",
+      "stock": "موجود در انبار"
     },
     {
       "id": 4,
-      "brand": "Nike",
+      "brand": "nike",
       "price": "100$",
       "category": "shoe",
-      "model": "Nike Air Force 1 Shadow",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/7796e97b-30b4-4208-96fa-b4eb9747776a/air-force-1-shadow-womens-shoes-kTgn9J.png"
+      "model": "nike Air Force 1 Shadow",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/7796e97b-30b4-4208-96fa-b4eb9747776a/air-force-1-shadow-womens-shoes-kTgn9J.png",
+      "stock": "موجود در انبار"
     },
     {
       "id": 5,
-      "brand": "Nike",
+      "brand": "nike",
       "price": "100$",
       "category": "shoe",
-      "model": "Nike Air Huarache Runner",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a414cb3e-e04b-49f4-bff3-2552f490273b/air-huarache-runner-mens-shoes-VMXWLx.png"
+      "model": "nike Air Huarache Runner",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a414cb3e-e04b-49f4-bff3-2552f490273b/air-huarache-runner-mens-shoes-VMXWLx.png",
+      "stock": "موجود در انبار"
     },
     {
       "id": 6,
-      "brand": "Nike",
+      "brand": "nike",
       "price": "100$",
       "category": "shoe",
-      "model": "Nike Air Max 95",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/208ac031-f5de-44ed-9843-f96290d8a9fe/air-max-95-mens-shoes-4Nzc1w.png"
+      "model": "nike Air Max 95",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/208ac031-f5de-44ed-9843-f96290d8a9fe/air-max-95-mens-shoes-4Nzc1w.png",
+      "stock": "موجود در انبار"
     },
     {
       "id": 7,
-      "brand": "Nike",
+      "brand": "nike",
       "price": "100$",
       "category": "shoe",
-      "model": "Nike Air Max 270",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/2ed73ce2-b0d0-4806-bb97-0981a8977369/air-max-270-mens-shoes-KkLcGR.png"
+      "model": "nike Air Max 270",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/2ed73ce2-b0d0-4806-bb97-0981a8977369/air-max-270-mens-shoes-KkLcGR.png",
+      "stock": "موجود در انبار"
     },
     {
       "id": 8,
-      "brand": "Nike",
+      "brand": "nike",
       "price": "100$",
       "category": "shoe",
-      "model": "Nike Air Max Pulse",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/2e282edb-e916-48cb-8329-97497507ab19/air-max-pulse-mens-shoes-ShS3tL.png"
+      "model": "nike Air Max Pulse",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/2e282edb-e916-48cb-8329-97497507ab19/air-max-pulse-mens-shoes-ShS3tL.png",
+      "stock": "موجود در انبار"
     },
     {
       "id": 9,
-      "brand": "Nike",
+      "brand": "nike",
       "price": "100$",
       "category": "shoe",
-      "model": "Nike Air Max Solo",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ca0c15b6-f064-4518-b80e-5dd91fdcaa3f/air-max-solo-mens-shoes-4SzqpT.png"
+      "model": "nike Air Max Solo",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/ca0c15b6-f064-4518-b80e-5dd91fdcaa3f/air-max-solo-mens-shoes-4SzqpT.png",
+      "stock": "موجود در انبار"
     },
     {
       "id": 10,
-      "brand": "Nike",
+      "brand": "nike",
       "price": "100$",
       "category": "shoe",
-      "model": "Nike Dunk Low Retro",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f0f09613-0f37-4e3b-8b11-42fb741187c7/dunk-low-retro-mens-shoes-NcVf5b.png"
+      "model": "nike Dunk Low Retro",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f0f09613-0f37-4e3b-8b11-42fb741187c7/dunk-low-retro-mens-shoes-NcVf5b.png",
+      "stock": "موجود در انبار"
     },
     {
       "id": 11,
-      "brand": "Nike",
+      "brand": "nike",
       "price": "100$",
       "category": "shoe",
-      "model": "Nike Dunk Low Retro-2",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0dc8ed4e-799d-4466-b31c-3d45a14496de/dunk-low-retro-mens-shoes-SSbL97.png"
+      "model": "nike Dunk Low Retro-2",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/0dc8ed4e-799d-4466-b31c-3d45a14496de/dunk-low-retro-mens-shoes-SSbL97.png",
+      "stock": "موجود در انبار"
     },
     {
       "id": 12,
-      "brand": "Nike",
+      "brand": "nike",
       "price": "160$",
       "category": "shoe",
-      "model": "Nike InfinityRN 4",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4e04c39c-70ee-40ef-a3eb-651d59bf7fe6/infinityrn-4-womens-road-running-shoes-N65CDx.png"
+      "model": "nike InfinityRN 4",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4e04c39c-70ee-40ef-a3eb-651d59bf7fe6/infinityrn-4-womens-road-running-shoes-N65CDx.png",
+      "stock": "موجود در انبار"
     },
     {
       "id": 13,
-      "brand": "Nike",
+      "brand": "nike",
       "price": "180$",
       "category": "shoe",
-      "model": "Nike Invincible 3",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/271884cc-ae38-469f-8298-1dee940c04d5/invincible-3-womens-road-running-shoes-M4VNQK.png"
+      "model": "nike Invincible 3",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/271884cc-ae38-469f-8298-1dee940c04d5/invincible-3-womens-road-running-shoes-M4VNQK.png",
+      "stock": "موجود در انبار"
     },
     {
       "id": 14,
-      "brand": "Nike",
+      "brand": "nike",
       "price": "180$",
       "category": "shoe",
-      "model": "Nike Invincible 3",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e9f8c612-0b6b-4e4e-aaf8-af0d8b88b40c/invincible-3-mens-road-running-shoes-Xrd0px.png"
+      "model": "nike Invincible 3",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e9f8c612-0b6b-4e4e-aaf8-af0d8b88b40c/invincible-3-mens-road-running-shoes-Xrd0px.png",
+      "stock": "موجود در انبار"
     },
     {
       "id": 15,
-      "brand": "Nike",
+      "brand": "nike",
       "price": "110$",
       "category": "shoe",
-      "model": "Nike Motiva",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5d5fb2e3-fe48-488c-acad-9b922f47cba2/motiva-mens-walking-shoes-0vX49k.png"
+      "model": "nike Motiva",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/5d5fb2e3-fe48-488c-acad-9b922f47cba2/motiva-mens-walking-shoes-0vX49k.png",
+      "stock": "موجود در انبار"
     },
     {
       "id": 16,
-      "brand": "Nike",
+      "brand": "nike",
       "price": "250$",
       "category": "shoe",
-      "model": "Nike Vaporfly 3",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/05d326ed-b7b6-4981-9e35-fb5476fc00c8/vaporfly-3-womens-road-racing-shoes-KcmWJb.png"
+      "model": "nike Vaporfly 3",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/05d326ed-b7b6-4981-9e35-fb5476fc00c8/vaporfly-3-womens-road-racing-shoes-KcmWJb.png",
+      "stock": "موجود در انبار"
     },
     {
       "id": 17,
-      "brand": "Nike",
+      "brand": "nike",
       "price": "275$",
       "category": "shoe",
-      "model": "Nike Alphafly 2",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/de5aee92-ed49-4bf7-85c3-7aa35b7cd511/alphafly-2-womens-road-racing-shoes-6grcms.png"
+      "model": "nike Alphafly 2",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/de5aee92-ed49-4bf7-85c3-7aa35b7cd511/alphafly-2-womens-road-racing-shoes-6grcms.png",
+      "stock": "موجود در انبار"
     },
     {
       "id": 18,
-      "brand": "Nike",
+      "brand": "nike",
       "price": "140$",
       "category": "shoe",
-      "model": "Nike React Pegasus Trail 4 SE",
-      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/bfa8623c-acd0-4a8f-a3ec-51c74605947b/pegasus-trail-4-womens-trail-running-shoes-CQT261.png"
+      "model": "nike React Pegasus Trail 4 SE",
+      "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/bfa8623c-acd0-4a8f-a3ec-51c74605947b/pegasus-trail-4-womens-trail-running-shoes-CQT261.png",
+      "stock": "موجود در انبار"
+    },
+    {
+      "id": 19,
+      "brand": "adidas",
+      "price": "105$",
+      "category": "shoe",
+      "model": "Forum Exhibit Low Shoes",
+      "image": "https://assets.adidas.com/images/w_600,f_auto,q_auto/319b51c57f234f7eb763af32015b1232_9366/Forum_Exhibit_Low_Shoes_White_HQ7110_01_standard.jpg",
+      "stock": "موجود در انبار"
+    },
+    {
+      "id": 20,
+      "brand": "adidas",
+      "price": "110$",
+      "category": "shoe",
+      "model": "Forum Low CL x Indigo Herz Shoes",
+      "image": "https://assets.adidas.com/images/w_600,f_auto,q_auto/94c39d2867404df293a7af5b0105eef2_9366/Forum_Low_CL_x_Indigo_Herz_Shoes_White_IE1855_HM1.jpg",
+      "stock": "موجود در انبار"
+    },
+    {
+      "id": 21,
+      "brand": "adidas",
+      "price": "75$",
+      "category": "shoe",
+      "model": "Cloudfoam Pure Shoes",
+      "image": "https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/8255caf9c4e44bdb8dec22e0b6a56bf6_9366/cloudfoam-pure-shoes.jpg",
+      "stock": "موجود در انبار"
+    },
+    {
+      "id": 22,
+      "brand": "adidas",
+      "price": "65$",
+      "category": "shoe",
+      "model": "Daily 3.0 Shoes",
+      "image": "https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/82e18ea988694abb868a2e7857091dff_9366/daily-3.0-shoes.jpg",
+      "stock": "موجود در انبار"
+    },
+    {
+      "id": 23,
+      "brand": "adidas",
+      "price": "90$",
+      "category": "shoe",
+      "model": "Swift Run 1.0 Shoes",
+      "image": "https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/e7bcde3021d94885a5acc4b7a3729b8d_9366/swift-run-1.0-shoes.jpg",
+      "stock": "موجود در انبار"
+    },
+    {
+      "id": 24,
+      "brand": "adidas",
+      "price": "100$",
+      "category": "shoe",
+      "model": "Gazelle Shoes",
+      "image": "https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/cb4057d7b9914b45b7c4b48fd96b93c6_9366/gazelle-shoes.jpg",
+      "stock": "موجود در انبار"
+    },
+    {
+      "id": 25,
+      "brand": "adidas",
+      "price": "90$",
+      "category": "shoe",
+      "model": "Samba Classic",
+      "image": "https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/9a1c1af88f044d2288d2a5a90114db97_9366/samba-classic.jpg",
+      "stock": "موجود در انبار"
+    },
+    {
+      "id": 26,
+      "brand": "adidas",
+      "price": "80$",
+      "category": "shoe",
+      "model": "Superstar Shoes",
+      "image": "https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/95e1a36aa4f04a73a80baafc01582e32_9366/superstar-shoes.jpg",
+      "stock": "موجود در انبار"
+    },
+    {
+      "id": 27,
+      "brand": "adidas",
+      "price": "80$",
+      "category": "shoe",
+      "model": "Racer TR23 Shoes",
+      "image": "https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/2b3e284855bb4907ac453b2e425e6aaf_9366/racer-tr23-shoes.jpg",
+      "stock": "موجود در انبار"
+    },
+    {
+      "id": 28,
+      "brand": "adidas",
+      "price": "110$",
+      "category": "shoe",
+      "model": "Forum Low Shoes",
+      "image": "https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/975feac58a02416f9510af9f0019495e_9366/forum-low-shoes.jpg",
+      "stock": "موجود در انبار"
+    },
+    {
+      "id": 29,
+      "brand": "adidas",
+      "price": "120$",
+      "category": "shoe",
+      "model": "TERREX AX4 GORE-TEX Hiking Shoes",
+      "image": "https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/8ca2298236754508937aaef900f471c6_9366/terrex-ax4-gore-tex-hiking-shoes.jpg",
+      "stock": "موجود در انبار"
+    },
+    {
+      "id": 30,
+      "brand": "adidas",
+      "price": "120$",
+      "category": "shoe",
+      "model": "Gazelle Shoes",
+      "image": "https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/24877557cf254aa898124023c6ff6f3c_9366/gazelle-shoes.jpg",
+      "stock": "موجود در انبار"
+    },
+    {
+      "id": 31,
+      "brand": "adidas",
+      "price": "70$",
+      "category": "shoe",
+      "model": "Hoops 3.0 Low Classic Vintage Shoes",
+      "image": "https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/2b3a2e489cb34d7ea77084d54d217afe_9366/hoops-3.0-low-classic-vintage-shoes.jpg",
+      "stock": "موجود در انبار"
+    },
+    {
+      "id": 32,
+      "brand": "adidas",
+      "price": "140$",
+      "category": "shoe",
+      "model": "Busenitz Vulc 2.0 Shoes",
+      "image": "https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/81138e7204ee4ff88f6aaf9e001c375e_9366/busenitz-vulc-2.0-shoes.jpg",
+      "stock": "موجود در انبار"
+    },
+    {
+      "id": 33,
+      "brand": "adidas",
+      "price": "65$",
+      "category": "shoe",
+      "model": "Daily 3.0 Shoes",
+      "image": "https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/344c7bffe6484cb598abb5c9ecd1e925_9366/daily-3.0-shoes.jpg",
+      "stock": "موجود در انبار"
+    },
+    {
+      "id": 34,
+      "brand": "adidas",
+      "price": "110$",
+      "category": "shoe",
+      "model": "Forum Exhibit Low 2.0 Shoes",
+      "image": "https://assets.adidas.com/images/w_600,f_auto,q_auto/0436162cd8724ad1bf71af5100001a7f_9366/Forum_Exhibit_Low_2.0_Shoes_Red_HQ7116_01_standard.jpg",
+      "stock": "موجود در انبار"
+    },
+    {
+      "id": 35,
+      "brand": "adidas",
+      "price": "110$",
+      "category": "shoe",
+      "model": "Stan Smith Shoes",
+      "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/951b768ce54a49a7b8892661423d7efb_9366/stan-smith-shoes.jpg",
+      "stock": "موجود در انبار"
+    },
+    {
+      "id": 36,
+      "brand": "adidas",
+      "price": "190$",
+      "category": "shoe",
+      "model": "Ultraboost Light Running Shoes",
+      "image": "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto,fl_lossy,c_fill,g_auto/ef53d314449c45abb07ba9fac0033052_9366/ultraboost-light-running-shoes.jpg",
+      "stock": "موجود در انبار"
     }
   ],
   "users": []
