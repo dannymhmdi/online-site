@@ -2,7 +2,7 @@ import React, { Fragment, useState } from "react";
 import styles from "./modal-test.module.css";
 import Accordion from "react-bootstrap/Accordion";
 import { AccordionFilters } from "../accordion";
-const FilterBox = ({ onClose }) => {
+const FilterBox = ({ onClose , onFilter}) => {
   // const [closeFilter, setCloseFilter] =useState(true)
   return (
     <Fragment>
@@ -14,7 +14,7 @@ const FilterBox = ({ onClose }) => {
             onClick={onClose}
           ></button>
         </div>
-       <AccordionFilters/>
+       <AccordionFilters onFilter={onFilter}/>
       </div>
     </Fragment>
   );

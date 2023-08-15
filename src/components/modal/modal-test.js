@@ -5,7 +5,7 @@ import { Row } from "react-bootstrap";
 import FilterBox from "./filter-box";
 import { useMediaQuery } from "@mui/material";
 import axios from "axios";
-const ModalTest = ({children}) => {
+const ModalTest = ({children , onFilter}) => {
   const [isShowfilter, setIsShowfilter] = useState(false);
   const matches = useMediaQuery("(min-width:992px)");
   const filterButtonHandler = () => {
@@ -35,9 +35,9 @@ const ModalTest = ({children}) => {
         </button>
       </div>
       <Row className="mt-lg-5">
-        {isShowfilter && <FilterBox onClose={onCloseHandler} />}
+        {isShowfilter && <FilterBox onClose={onCloseHandler} onFilter={onFilter}/>}
 
-        {matches && <FilterBox />}
+        {matches && <FilterBox   onFilter={onFilter}/>}
         <div className="product-items border border-1 border-danger col-12 col-lg-10 px-0s">
          {children}
         </div>

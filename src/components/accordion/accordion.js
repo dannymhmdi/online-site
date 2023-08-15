@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./accordion.module.css";
-import "../../libraries-to-use/react-bootstrap"
+import "../../libraries-to-use/react-bootstrap";
 // import Mui from "@mui/material"
 import {
   Accordion,
@@ -9,10 +9,13 @@ import {
   Typography,
 } from "@mui/material";
 import { ExpandLessTwoTone } from "@mui/icons-material";
-const AccordionFilters = () => {
+import { MyContext } from "../../context/my-context-provider";
+const AccordionFilters = ({ onFilter }) => {
+  const {state , dispatch} = useContext(MyContext)
+ console.log('state accardion=',state)
   return (
     <div className={styles["accordion-container"]}>
-      <Accordion style={{ marginBottom: "0"}}>
+      <Accordion style={{ marginBottom: "0" }}>
         <AccordionSummary
           id="panel1-header"
           aria-controls="panel1-content"
@@ -24,16 +27,23 @@ const AccordionFilters = () => {
           <Typography>
             <div className="d-flex justify-content-between borders border-infos mb-3">
               <label htmlFor="nike">Nike</label>
-              <input type="checkbox" id="nike"/>
+              <input type="checkbox" id="nike" 
+              onChange={onFilter} 
+              // onChange={(e) => dispatch({type:'nike',payLoad:e.target.id})}
+              />
             </div>
-            
+
             <div className="d-flex justify-content-between borders border-infos mb-3">
               <label htmlFor="adidas">Adidas</label>
-              <input type="checkbox" id="adidas"/>
+              <input type="checkbox" id="adidas"
+               onChange={onFilter} 
+               />
             </div>
             <div className="d-flex justify-content-between borders border-infos mb-3">
               <label htmlFor="Reebok">Reebok</label>
-              <input type="checkbox" id="Reebok"/>
+              <input type="checkbox" id="reebok"
+               onChange={onFilter} 
+               />
             </div>
           </Typography>
         </AccordionDetails>
