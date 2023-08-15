@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Pagination from "react-bootstrap/Pagination";
 import styles from "./pagination.module.css";
-const PaginationBootstrap = ({ pageSize, totalItem , onPaginate}) => {
+const PaginationBootstrap = ({ pageSize, totalItem , onPaginate , onClick}) => {
   const paginationButtons = [];
   const totalPages = Math.ceil(totalItem / pageSize);
   const [currentPage, setCurrentPage] = useState(1);
-
+   const [increment , setIncrement] = useState(0)
 //   console.log(totalPages);
 //   console.log('currentpage =',currentPage)
 
@@ -16,7 +16,7 @@ const PaginationBootstrap = ({ pageSize, totalItem , onPaginate}) => {
 
   for (let page = 1; page <= totalPages; page++) {
     paginationButtons.push(
-      <Pagination.Item
+      <Pagination.Item key={page}
         onClick={() => onPageChangeHandler(page)}
         className={`me-1 ${styles['pagination-item']} `}
         active={currentPage === page}
@@ -46,6 +46,11 @@ const PaginationBootstrap = ({ pageSize, totalItem , onPaginate}) => {
    onPaginate(totalPages)
   }
 
+  const onIncrementHandler = () => {
+    setIncrement(increment + 1)
+    onClick(increment)
+  }
+
   return (
     <Pagination className={`${styles["pagination"]}`}>
       <Pagination.First onClick={onFirstPageHandler} className={`me-1  ${styles['pagination-item']}`} disabled={currentPage === 1} />
@@ -55,6 +60,9 @@ const PaginationBootstrap = ({ pageSize, totalItem , onPaginate}) => {
       {/* <Pagination.Item active>{12}</Pagination.Item> */}
       <Pagination.Next onClick={onNextPageHandler} className={`me-1  ${styles['pagination-item']}`} disabled={currentPage === totalPages} />
       <Pagination.Last onClick={onLastPageHandler} className={`me-1  ${styles['pagination-item']}`} disabled={currentPage === totalPages} />
+      <h3>{increment}</h3>
+      <br />
+      <button onClick={onIncrementHandler}>click</button>
     </Pagination>
   );
 };

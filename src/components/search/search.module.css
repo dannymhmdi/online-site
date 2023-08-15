@@ -1,0 +1,37 @@
+.search-container{
+  transition: all .2s linear;
+}
+
+.search-button{
+    left: 0;
+    bottom: 0;
+    transition: all .1s linear !important;
+    z-index: 100;
+    text-align: right;
+    transform: scale(.95);
+  }
+  
+  .search-button:hover{
+    background-color: #146c43 !important;
+  }
+  
+  .close-button{
+    left:0;
+    bottom: 0;
+    transform: translateX(100%);
+    transition: all .1s linear !important;
+    z-index: 100;
+  }
+  
+  .close-button:hover{
+    background-color: #dcdada !important;
+  }
+
+  .show-search-bar{
+    transform: scaleY(1);
+    }
+    
+    .hide-search-bar{
+    transform: scaleY(0);
+    }
+

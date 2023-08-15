@@ -1,9 +1,51 @@
-.grid-container{
-    justify-content: stretch !important;
-    align-items: stretch !important;
+.grid-container {
+  justify-content: stretch !important;
+  align-items: stretch !important;
 }
-.grid-item{
-    align-self: stretch !important;
-    justify-self: stretch !important;
-    height: 100% !important;
+.grid-item {
+  align-self: stretch !important;
+  justify-self: stretch !important;
+  height: 100% !important;
+}
+
+.shop-btn {
+  transition: all 0.2s ease-in;
+}
+
+.shop-btn:hover {
+  letter-spacing: 1px;
+}
+
+.search-button {
+  left: 0;
+  bottom: 0;
+  transition: all 0.1s linear !important;
+  z-index: 100;
+  text-align: right;
+  transform: scale(0.95);
+}
+
+.search-button:hover {
+  background-color: #146c43 !important;
+}
+
+.close-button {
+  left: 0;
+  bottom: 0;
+  transform: translateX(100%);
+  transition: all 0.1s linear !important;
+  z-index: 100;
+}
+
+.close-button:hover {
+  background-color: #dcdada !important;
+}
+
+.card{
+    transition: all .1s ease-in-out;
+}
+
+.card:hover{
+    border: 1px solid #e4e4e4 !important;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
