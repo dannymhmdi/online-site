@@ -6,8 +6,11 @@ import { Fragment, useContext, useEffect, useRef, useState } from "react";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { MyContext } from "../../context/my-context-provider";
 import SearchBar from "../search-bar/search-bar";
-import { Row } from "react-bootstrap";
-
+import { Button, ButtonGroup, Row } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCertificate } from "@fortawesome/free-solid-svg-icons";
+import { faMoneyCheckDollar } from "@fortawesome/free-solid-svg-icons";
+import { faTruckFast } from "@fortawesome/free-solid-svg-icons";
 const Header = () => {
   const [isShowMenu, setIsShowMenu] = useState(false);
   const [showsearchBar, setShowSearchBar] = useState(false);
@@ -26,9 +29,35 @@ const Header = () => {
     console.log(showsearchBar);
   };
 
+  const totalPriceHandler = () => {
+    const totals = state.totalPrice.map((value) => {
+      return Number(value.slice(0, value.length - 1)) * 50000;
+    });
+
+    let sum = null;
+    for (const total of totals) {
+      sum += total;
+    }
+
+    if (sum > 0) {
+      let sumToString = sum.toString();
+      return sumToString.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+  };
+
+  const changePriceHandler = (x) => {
+    const priceToInteger = Number(x.price.slice(0, x.price.length - 1)) * 50000;
+    const priceToString = priceToInteger.toString();
+    // console.log('changePriceHandler',priceToInteger)
+    return priceToString.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   return (
     // <BasePage fluid={true} style={{padding:'0'}} >
     <header>
+      <div className={`${styles["header-sticky-banner"]} col-12`}>
+        <a href=""></a>
+      </div>
       <div
         className={`${styles["search-nav-container"]}`}
         style={{ padding: "5px 0" }}
@@ -95,15 +124,21 @@ const Header = () => {
             {state.shopBasket.length === 0 ? "" : state.shopBasket.length}
           </span>
         </Link>
-        <div className={`${state.shopBasket.length === 0 ? styles['shop-container-empty'] : ''} ${styles["shop-container"]}`}>
+        <div
+          className={`${
+            state.shopBasket.length === 0 ? styles["shop-container-empty"] : ""
+          } ${styles["shop-container"]} ${
+            state.shopBasket.length > 3 ? styles["shop-container-overflow"] : ""
+          } col-10 col-md-7`}
+        >
+          <div className="text-secondary fs-6 mb-2">
+            {state.shopBasket.length} کالا
+          </div>
           {state.shopBasket.map((shopItem) => {
             return (
-              <Fragment>
-                <div className="text-secondary fs-6 mb-2">
-                  {state.shopBasket.length} کالا
-                </div>
+              <Fragment key={shopItem.id}>
                 <Row
-                  className={`${styles["shop-item"]} border-dangers borders mx-0`}
+                  className={`${styles["shop-item"]} border-dangers borders mx-0 mb-2`}
                 >
                   <div className="col-5 px-0  border-dangers borders">
                     <img
@@ -113,32 +148,76 @@ const Header = () => {
                       alt=""
                     />
                   </div>
-                  <div className="col-7 d-flex flex-column px-2">
+                  <div className="col-7 d-flex flex-column px-2 justify-content-evenly">
                     {" "}
                     <div className="d-flex">
                       <span
-                        class="material-symbols-outlined text-success"
-                        style={{ paddingLeft: "10px" }}
+                        className="material-symbols-outlined text-success"
+                        style={{ marginLeft:'13px' }}
                       >
                         event_available
                       </span>
-                      <h3 className="fs-6">{shopItem.stock}</h3>
+                      <h3
+                        className={`${styles["fs-sm-6"]}`}
+                        style={{ fontSize: "12px" }}
+                      >
+                        {shopItem.stock}
+                      </h3>
                     </div>
                     <div className="d-flex">
-                      <span class="material-symbols-outlined" style={{ paddingLeft: "10px",color:'purple' }}>
-                        local_shipping
-                      </span>
-                      <h3 className="fs-6">ارسال سریع</h3>
+                    <FontAwesomeIcon icon={faTruckFast} style={{marginLeft:'13px',color:'purple'}} bounce />
+                      <h3
+                        className={`${styles["fs-sm-6"]}`}
+                        style={{ fontSize: "12px" }}
+                      >
+                        ارسال سریع
+                      </h3>
                     </div>
                     <div className="d-flex">
-                    {/* <FontAwesomeIcon icon="fa-solid fa-medal" beat /> */}
-                      <h3 className="fs-6">ارسال سریع</h3>
+                      <FontAwesomeIcon
+                        icon={faCertificate}
+                        beat
+                        size="lg"
+                        style={{ marginLeft:'13px' , color: "gold" }}
+                      />
+                      <h3
+                        className={`${styles["fs-sm-6"]}`}
+                        style={{ fontSize: "12px" }}
+                      >
+                        ضمانت اصالت کالا
+                      </h3>
+                    </div>
+                    <div className="d-flex borders border-dangers">
+                      <FontAwesomeIcon
+                        icon={faMoneyCheckDollar}
+                        flip
+                        size="lg"
+                        style={{ color: "green",marginLeft:'13px' }}
+                      />
+                      <h3
+                        className={`${styles["fs-sm-6"]}`}
+                        style={{ fontSize: "12px" }}
+                      >
+                        {changePriceHandler(shopItem)} تومان
+                      </h3>
                     </div>
                   </div>
                 </Row>
-               </Fragment>
+              </Fragment>
             );
           })}
+          <div
+            className={`${styles["fs-sm-6"]} fw-bold borders border-dangers d-flex flex-wrap justify-content-between px-2`}
+            style={{ fontSize: "12px" }}
+          >
+            <span> مبلغ کل سفارش :</span>
+            <span>{totalPriceHandler()}تومان</span>
+            <div className="w-100 py-2">
+              <Button variant="success" className="w-100">
+                نهایی کردن سفارش
+              </Button>
+            </div>
+          </div>
         </div>
         <Link to={"/"}>
           <img
