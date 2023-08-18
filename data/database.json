@@ -3,7 +3,7 @@
     {
       "id": 1,
       "brand": "nike",
-      "price": "100$",
+      "price": "105$",
       "category": "shoe",
       "model": "Air Jordan 7 Retro",
       "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/72b6ad7a-6f1a-47c2-8c32-2f84de633712/air-jordan-7-retro-mens-shoes-7Zr804.png",
@@ -12,7 +12,7 @@
     {
       "id": 2,
       "brand": "nike",
-      "price": "100$",
+      "price": "110$",
       "category": "shoe",
       "model": "nike Air Force 1 '07 Next Nature",
       "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/c6d9d042-f0b9-46a3-bd1f-04e16541a1d9/air-force-1-07-next-nature-womens-shoes-fvxZ0g.png",
@@ -21,7 +21,7 @@
     {
       "id": 3,
       "brand": "nike",
-      "price": "100$",
+      "price": "98$",
       "category": "shoe",
       "model": "nike Air Force 1 '07",
       "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e6da41fa-1be4-4ce5-b89c-22be4f1f02d4/air-force-1-07-mens-shoes-jBrhbr.png",
@@ -30,7 +30,7 @@
     {
       "id": 4,
       "brand": "nike",
-      "price": "100$",
+      "price": "90$",
       "category": "shoe",
       "model": "nike Air Force 1 Shadow",
       "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/7796e97b-30b4-4208-96fa-b4eb9747776a/air-force-1-shadow-womens-shoes-kTgn9J.png",
@@ -39,7 +39,7 @@
     {
       "id": 5,
       "brand": "nike",
-      "price": "100$",
+      "price": "85$",
       "category": "shoe",
       "model": "nike Air Huarache Runner",
       "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/a414cb3e-e04b-49f4-bff3-2552f490273b/air-huarache-runner-mens-shoes-VMXWLx.png",
@@ -48,7 +48,7 @@
     {
       "id": 6,
       "brand": "nike",
-      "price": "100$",
+      "price": "130$",
       "category": "shoe",
       "model": "nike Air Max 95",
       "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/208ac031-f5de-44ed-9843-f96290d8a9fe/air-max-95-mens-shoes-4Nzc1w.png",
@@ -57,7 +57,7 @@
     {
       "id": 7,
       "brand": "nike",
-      "price": "100$",
+      "price": "125$",
       "category": "shoe",
       "model": "nike Air Max 270",
       "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/2ed73ce2-b0d0-4806-bb97-0981a8977369/air-max-270-mens-shoes-KkLcGR.png",
@@ -66,7 +66,7 @@
     {
       "id": 8,
       "brand": "nike",
-      "price": "100$",
+      "price": "140$",
       "category": "shoe",
       "model": "nike Air Max Pulse",
       "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/2e282edb-e916-48cb-8329-97497507ab19/air-max-pulse-mens-shoes-ShS3tL.png",
