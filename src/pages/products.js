@@ -21,8 +21,8 @@ import { PaginationBootstrap } from "../components/pagination";
 import { Form } from "react-bootstrap";
 import { FloatingLabel } from "react-bootstrap";
 import SearchOops from "../components/search-oops/search-oops";
-import userEvent from "@testing-library/user-event";
-
+import Categori from "../components/categori-card/categori";
+import { MySwiper } from "../components/swiper-slide";
 const Products = ({}) => {
   const [isLoading, setIsLoading] = useState(true);
   const [searchLoading, setSearchLoading] = useState(false);
@@ -37,7 +37,7 @@ const Products = ({}) => {
     setSearchValue(text.trim());
   };
 
-  const onPaginateHandler = (pageNo) => {
+ const onPaginateHandler = (pageNo) => {
     setCurrentPageProducts(pageNo);
     setIsLoading(true);
   };
@@ -73,11 +73,6 @@ const Products = ({}) => {
   };
 
   const { state, dispatch } = useContext(MyContext);
-  // console.log("state in product =", state.searchInputValue);
-
-  // useEffect(() => {
-  //   console.log("products =", products.length);
-  // }, [products]);
 
   const resetButtonHandler = () => {
     axios
@@ -89,6 +84,12 @@ const Products = ({}) => {
         setSearchValue("");
       });
   };
+
+  useEffect(() => {
+    if (searchValue.length === 0 ) {
+      axios.get(`http://localhost:3001/products?_page=${currentPageProducts}&_limit=8`).then(res => setProducts(res.data))
+    }
+  },[searchValue])
 
   let urlFilter = `?brand=`;
 
@@ -134,6 +135,13 @@ const Products = ({}) => {
 
   console.log("out", urlFilter);
 
+ const changePriceHandler =  (x) => {
+    const priceToInteger = Number(x.price.slice(0 , x.price.length - 1)) * 50000
+    const priceToString = priceToInteger.toString()
+    // console.log('changePriceHandler',priceToInteger)
+    return priceToString.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
   console.log("currentPageProducts=", currentPageProducts);
 
   return (
@@ -141,10 +149,12 @@ const Products = ({}) => {
       <BasePage fluid={false} title={"محصولات"}>
         <div>
           <Carousel style={{ border: "1px solid" }}></Carousel>
-          {/* <ModalPart></ModalPart> */}
+          {/* <ModalPart></ModalPart> */}<MySwiper/>
         </div>
       </BasePage>
       <BasePage fluid={true} style={{ border: "2px solids" }} title={"محصولات"}>
+        
+        <Categori/>
         <ModalTest
           style={{ border: "4px solid green" }}
           onFilter={inputHandler}
@@ -208,7 +218,7 @@ const Products = ({}) => {
                       </Card.Text>
                     </Card.Body>
                     <Card.Footer className="bg-transparent border-0">
-                    <Card.Text className="border border-2 border-danger">{Number(card.price.slice(0 , card.price.length - 1)) * 50000}</Card.Text>
+                    <Card.Text className="borders border-2s border-dangers">{changePriceHandler(card)}تومان</Card.Text>
                       <Button
                         className={styles["shop-btn"]}
                         variant="success d-flex"
@@ -240,9 +250,9 @@ const Products = ({}) => {
       />
       <br />
       <h3>{test}</h3>
-
     </Fragment>
   );
 };
 
 export default Products;
+

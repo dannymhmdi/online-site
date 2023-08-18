@@ -25,7 +25,7 @@ const ModalTest = ({children , onFilter}) => {
 
   return (
     <Fragment>
-      <div className={`mt-5 mb-2 ${styles['filter-btn-container']}`}>
+      <div className={`mt-5 mb-2  ${styles['filter-btn-container']}`}>
         <button
           className={`d-flex btn btn-success  ${styles["filter-btn"]}`}
           onClick={filterButtonHandler}
