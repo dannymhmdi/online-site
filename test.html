@@ -59,8 +59,19 @@
             color: white;
             transform: rotateY(180deg);
         }
-        .webpage{
+
+        .webpage {
             border: 1px solid red;
+        }
+
+        .bg-container {
+            border: 2px solid;
+            background-image: url(src/assets/shoe/banner.jpg);
+            background-position: center;
+            height: 50px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 50%;
         }
     </style>
 </head>
@@ -78,6 +89,7 @@
         </div>
     </div>
     <p id="p1"></p>
+    <div class="bg-container"></div>
 
     <iframe src="https://fonts.google.com/icons" frameborder="0" class="webpage">
 
@@ -87,7 +99,7 @@
         let obj = {
             firstName: 'daniel',
             lastName: 'Safavi',
-            'car':'Benz'
+            'car': 'Benz'
         }
 
         console.log(obj.car)
@@ -98,7 +110,7 @@
         let [first, second, ...rest] = fruits
         //    fruits.push(...fruits)
         console.log(...rest)
-        document.getElementById('p1').innerHTML = fruits.some(value =>   value.length > 6)
+        document.getElementById('p1').innerHTML = fruits.some((value, index) => index === 2)
 
         for (let fruit of fruits) {
             if (fruit == 'Apple') {
@@ -118,8 +130,15 @@
 
         }
 
-
         consoleTest()
+
+        var x = 25;
+        y = 30;
+        console.log('y=', y)
+
+      var y
+
+
 
 
     </script>
