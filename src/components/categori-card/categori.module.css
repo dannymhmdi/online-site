@@ -1,0 +1,15 @@
+.fluid-image{
+    width: 100% !important;
+    height: auto;
+    transition: all .2s linear;
+}
+
+.fluid-image:hover{
+    transform: scale(1.05);
+}
+
+.image-box{
+    overflow: hidden;
+}
+
+
