@@ -32,12 +32,14 @@ const Products = ({}) => {
   const [test, setTest] = useState(300);
   const [searchValue, setSearchValue] = useState("");
   const [target, setTarget] = useState([]);
+  const [urlFilter, setUrlFilter] = useState("?brand=");
+  const [checked, setChecked] = useState(false);
   const handleSearch = (e) => {
     const text = e.target.value;
     setSearchValue(text.trim());
   };
 
- const onPaginateHandler = (pageNo) => {
+  const onPaginateHandler = (pageNo) => {
     setCurrentPageProducts(pageNo);
     setIsLoading(true);
   };
@@ -67,6 +69,7 @@ const Products = ({}) => {
       .get(`http://localhost:3001/products?q=${searchValue}`)
       .then((response) => {
         setProducts(response.data);
+        console.log("first", response.data);
         setSearchLoading(false);
         console.log("prod =", response);
       });
@@ -86,29 +89,37 @@ const Products = ({}) => {
   };
 
   useEffect(() => {
-    if (searchValue.length === 0 ) {
-      axios.get(`http://localhost:3001/products?_page=${currentPageProducts}&_limit=8`).then(res => setProducts(res.data))
+    if (searchValue.length === 0) {
+      axios
+        .get(
+          `http://localhost:3001/products?_page=${currentPageProducts}&_limit=8`
+        )
+        .then((res) => setProducts(res.data));
     }
-  },[searchValue])
+  }, [searchValue]);
 
-  let urlFilter = `?brand=`;
+  // let urlFilter = `?brand=`;
 
   const inputHandler = (e) => {
     console.log("checkbox toggled");
     console.log("target=", e.target.checked);
+    setUrlFilter(urlFilter + `${e.target.id}&brand=`);
+    setChecked(e.target.checked);
 
-    e.target.checked === true
-      ? (urlFilter += `${e.target.id}&brand=`)
-      : (urlFilter = `?brand=`);
+    if (e.target.checked === false) {
+      setUrlFilter(urlFilter.replace(`${e.target.id}&brand=`, ""));
+    }
+    // console.log('e.targert=',e.target.checked)
+
+    // e.target.checked
+    //   ? (urlFilter += `${e.target.id}&brand=`)
+    //   : (urlFilter = `?brand=`);
     // console.log('in',urlFilter)
     // if (e.target.checked) {
     //   console.log('in',urlFilter)
-
-    //   // urlFilter += `${e.target.id}&brand=`;
     //   axios
     //     .get(`http://localhost:3001/products${urlFilter}`)
     //     .then((res) => setProducts(res.data));
-    //   // console.log("in", urlFilter);
     // }
     // else {
     //   axios
@@ -120,27 +131,53 @@ const Products = ({}) => {
     //     });
     // }
 
-    axios.get(`http://localhost:3001/products`).then((res) =>
-      setProducts(
-        res.data.filter((value) => {
-          return value.brand === e.target.id;
-        })
-      )
-    );
-    // if (e.target.checked) {
-    //   const newProducts = products.filter(value =>  {return (value.brand === e.target.id)})
-    // setProducts(newProducts)
-    // }
+    // axios.get(`http://localhost:3001/products`).then((res) =>
+    //   setProducts(
+    //     res.data.filter((value) => {
+    //       return value.brand === e.target.id;
+    //     })
+    //   )
+    // );
   };
 
-  console.log("out", urlFilter);
+  useEffect(() => {
+    console.log("out", urlFilter);
+  }, [urlFilter]);
 
- const changePriceHandler =  (x) => {
-    const priceToInteger = Number(x.price.slice(0 , x.price.length - 1)) * 50000
-    const priceToString = priceToInteger.toString()
+  useEffect(() => {
+    if (checked) {
+      axios
+        .get(`http://localhost:3001/products${urlFilter}`)
+        .then((res) => setProducts(res.data));
+    }
+
+    if (urlFilter === "?brand=") {
+      axios
+        .get(
+          `http://localhost:3001/products?_page=${currentPageProducts}&_limit=8`
+        )
+        .then((res) => {
+          setProducts(res.data);
+        });
+
+    } 
+    else {
+      axios
+        .get(
+          `http://localhost:3001/products${urlFilter}`
+        )
+        .then((res) => {
+          setProducts(res.data);
+        });
+    }
+  }, [checked, urlFilter]);
+
+  const changePriceHandler = (x) => {
+    const priceToInteger = Number(x.price.slice(0, x.price.length - 1)) * 50000;
+    const priceToString = priceToInteger.toString();
     // console.log('changePriceHandler',priceToInteger)
     return priceToString.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
+  };
 
   console.log("currentPageProducts=", currentPageProducts);
 
@@ -149,12 +186,12 @@ const Products = ({}) => {
       <BasePage fluid={false} title={"محصولات"}>
         <div>
           <Carousel style={{ border: "1px solid" }}></Carousel>
-          {/* <ModalPart></ModalPart> */}<MySwiper/>
+          {/* <ModalPart></ModalPart> */}
+          <MySwiper />
         </div>
       </BasePage>
       <BasePage fluid={true} style={{ border: "2px solids" }} title={"محصولات"}>
-        
-        <Categori/>
+        <Categori />
         <ModalTest
           style={{ border: "4px solid green" }}
           onFilter={inputHandler}
@@ -218,7 +255,9 @@ const Products = ({}) => {
                       </Card.Text>
                     </Card.Body>
                     <Card.Footer className="bg-transparent border-0">
-                    <Card.Text className="borders border-2s border-dangers">{changePriceHandler(card)}تومان</Card.Text>
+                      <Card.Text className="borders border-2s border-dangers">
+                        {changePriceHandler(card)}تومان
+                      </Card.Text>
                       <Button
                         className={styles["shop-btn"]}
                         variant="success d-flex"
@@ -255,4 +294,3 @@ const Products = ({}) => {
 };
 
 export default Products;
-
