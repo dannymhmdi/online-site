@@ -120,19 +120,58 @@
     <span>hello world</span>
     <button onclick="">change name</button>
     <script>
-    let name = 'Daniel'
-    
-    document.querySelector('button').onclick = function (){
-     name += ' Mohammadi'
-     console.log(name)
-    }
+        let name = 'Daniel'
 
-    const changeName = () => {
-        name += ' Mohammadi'
-        // console.log(name)
-    }
-    changeName()
-      console.log(name)
+        document.querySelector('button').onclick = function () {
+            name += ' Mohammadi'
+            console.log(name)
+        }
+
+        const changeName = () => {
+            name += ' Mohammadi'
+            // console.log(name)
+        }
+        changeName()
+        console.log(name)
+
+        const person = {
+            'name': 'Daniel',
+            'last-name': 'Mohammadi',
+            age: 24,
+            
+        }
+
+        Object.seal(person)
+        person.name = 'Hesam'
+        person.fullName= 'Hesam Mohammadi'
+        delete person['last-name']
+        person['last-name']= 5
+        console.log('person =',person)
+
+        const o = Object.seal(person)
+         o.name = 'Roya'
+         o.fullName = 'fasfd'
+
+        console.log('o =', o)
+        console.log('person =',person)
+        const person2 = { ...person }
+
+     if(a>10 && a<20){
+        console.log('its worked')
+     }
+
+        const products = [{
+            "id": 1,
+            "brand": "nike",
+            "price": "105$",
+            "category": "shoe",
+            "model": "Air Jordan 7 Retro",
+            "image": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/72b6ad7a-6f1a-47c2-8c32-2f84de633712/air-jordan-7-retro-mens-shoes-7Zr804.png",
+            "stock": "موجود در انبار"
+        }]
+        console.log('products',products[0].model )
+        let variable = ''
+        console.log('logical not=',!!variable)
 
     </script>
 </body>

@@ -5,11 +5,12 @@ import { BootstrapCard } from "../components/card";
 
 const Contact = () => {
   return (
-    <BasePage fluid={false} title={'تماس با ما'}>
+    <BasePage fluid={false} title={'تماس با ما'} style={{border:'1px solid'}}>
       <div>
         <h3>Contact</h3>
         {/* <MUiCard/> */}
-        <BootstrapCard/>
+        {/* <BootstrapCard/> */}
+        
       </div> 
     </BasePage>
   );

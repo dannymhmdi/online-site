@@ -23,6 +23,7 @@ import { FloatingLabel } from "react-bootstrap";
 import SearchOops from "../components/search-oops/search-oops";
 import Categori from "../components/categori-card/categori";
 import { MySwiper } from "../components/swiper-slide";
+import { Link, useParams } from "react-router-dom";
 const Products = ({}) => {
   const [isLoading, setIsLoading] = useState(true);
   const [searchLoading, setSearchLoading] = useState(false);
@@ -34,6 +35,9 @@ const Products = ({}) => {
   const [target, setTarget] = useState([]);
   const [urlFilter, setUrlFilter] = useState("?brand=");
   const [checked, setChecked] = useState(false);
+  
+const name = ''
+
   const handleSearch = (e) => {
     const text = e.target.value;
     setSearchValue(text.trim());
@@ -56,6 +60,7 @@ const Products = ({}) => {
         )
         .then((res) => {
           setProducts(res.data);
+          console.log('currentpage',res)
           setIsLoading(false);
           setTotalItem(res.headers["x-total-count"]);
           console.log(res);
@@ -98,46 +103,16 @@ const Products = ({}) => {
     }
   }, [searchValue]);
 
-  // let urlFilter = `?brand=`;
-
   const inputHandler = (e) => {
     console.log("checkbox toggled");
     console.log("target=", e.target.checked);
-    setUrlFilter(urlFilter + `${e.target.id}&brand=`);
+    setUrlFilter(`${urlFilter}${e.target.id}&brand=`);
+    // setUrlFilter(urlFilter + `${e.target.id}&brand=`)
     setChecked(e.target.checked);
 
     if (e.target.checked === false) {
       setUrlFilter(urlFilter.replace(`${e.target.id}&brand=`, ""));
     }
-    // console.log('e.targert=',e.target.checked)
-
-    // e.target.checked
-    //   ? (urlFilter += `${e.target.id}&brand=`)
-    //   : (urlFilter = `?brand=`);
-    // console.log('in',urlFilter)
-    // if (e.target.checked) {
-    //   console.log('in',urlFilter)
-    //   axios
-    //     .get(`http://localhost:3001/products${urlFilter}`)
-    //     .then((res) => setProducts(res.data));
-    // }
-    // else {
-    //   axios
-    //     .get(
-    //       `http://localhost:3001/products?_page=${currentPageProducts}&_limit=8`
-    //     )
-    //     .then((res) => {
-    //       setProducts(res.data);
-    //     });
-    // }
-
-    // axios.get(`http://localhost:3001/products`).then((res) =>
-    //   setProducts(
-    //     res.data.filter((value) => {
-    //       return value.brand === e.target.id;
-    //     })
-    //   )
-    // );
   };
 
   useEffect(() => {
@@ -149,9 +124,7 @@ const Products = ({}) => {
       axios
         .get(`http://localhost:3001/products${urlFilter}`)
         .then((res) => setProducts(res.data));
-    }
-
-    if (urlFilter === "?brand=") {
+    } else if (urlFilter === "?brand=") {
       axios
         .get(
           `http://localhost:3001/products?_page=${currentPageProducts}&_limit=8`
@@ -159,16 +132,10 @@ const Products = ({}) => {
         .then((res) => {
           setProducts(res.data);
         });
-
-    } 
-    else {
-      axios
-        .get(
-          `http://localhost:3001/products${urlFilter}`
-        )
-        .then((res) => {
-          setProducts(res.data);
-        });
+    } else {
+      axios.get(`http://localhost:3001/products${urlFilter}`).then((res) => {
+        setProducts(res.data);
+      });
     }
   }, [checked, urlFilter]);
 
@@ -180,6 +147,7 @@ const Products = ({}) => {
   };
 
   console.log("currentPageProducts=", currentPageProducts);
+  console.log('state in product',state)
 
   return (
     <Fragment>
@@ -248,11 +216,13 @@ const Products = ({}) => {
                     <Card.Img variant="top" src={card.image} />
                     <Card.Body>
                       <Card.Title as={"h6"}>کتونی {card.model}</Card.Title>
-                      <Card.Text>
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This content is a
-                        little bit longer.
-                      </Card.Text>
+                      <Link to={`/products/sneakers-model/${card.id}/${card.model}`} target="_blank">
+                        <Card.Text>
+                          This is a wider card with supporting text below as a
+                          natural lead-in to additional content. This content is
+                          a little bit longer.
+                        </Card.Text>
+                      </Link>
                     </Card.Body>
                     <Card.Footer className="bg-transparent border-0">
                       <Card.Text className="borders border-2s border-dangers">
@@ -289,6 +259,7 @@ const Products = ({}) => {
       />
       <br />
       <h3>{test}</h3>
+      <button disabled={name.length === 0}>ddddd</button>
     </Fragment>
   );
 };
