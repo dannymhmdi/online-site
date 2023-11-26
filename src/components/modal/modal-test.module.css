@@ -1,8 +1,8 @@
-body{
-    position: relative ;
+body {
+  position: relative;
 }
 .filter-box {
-  border: 2px solid ;
+  border: 2px solid;
   padding: 0 !important;
   position: absolute;
   /* bottom: 100%; */
@@ -10,21 +10,25 @@ body{
   bottom: 0;
   z-index: 10000;
   background-color: #fff;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
-@media screen and (min-width:992px) {
-    /* .filter-btn{
+.hide-filterbox {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  /* .filter-btn{
         display: none !important;
     } */
-    .filter-btn-container{
-        display: none;
-    }
-    .filter-box{
-        position: relative;
-        z-index: 0;
-    }
-    .filter-close-button{
-        display: none;
-    }
+  .filter-btn-container {
+    display: none;
+  }
+  .filter-box {
+    position: relative;
+    z-index: 0;
+  }
+  .filter-close-button {
+    display: none;
+  }
 }

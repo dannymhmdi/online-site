@@ -2,11 +2,11 @@ import React, { Fragment, useState } from "react";
 import styles from "./modal-test.module.css";
 import Accordion from "react-bootstrap/Accordion";
 import { AccordionFilters } from "../accordion";
-const FilterBox = ({ onClose , onFilter}) => {
+const FilterBox = ({ onClose , onFilter , className}) => {
   // const [closeFilter, setCloseFilter] =useState(true)
   return (
     <Fragment>
-      <div className={`${styles["filter-box"]} col-12 px-3 col-lg-2`}>
+      <div className={`${styles["filter-box"]} col-12 px-3 col-lg-2 ${className}`}>
         <div className=" d-flex justify-content-between border-bottom p-3 col-12">
           <h4>فیلتر</h4>
           <button

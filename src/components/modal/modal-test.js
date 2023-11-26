@@ -5,7 +5,7 @@ import { Row } from "react-bootstrap";
 import FilterBox from "./filter-box";
 import { useMediaQuery } from "@mui/material";
 import axios from "axios";
-const ModalTest = ({children , onFilter}) => {
+const ModalTest = ({ children, onFilter }) => {
   const [isShowfilter, setIsShowfilter] = useState(false);
   const matches = useMediaQuery("(min-width:992px)");
   const filterButtonHandler = () => {
@@ -22,10 +22,11 @@ const ModalTest = ({children , onFilter}) => {
     }
   }, [matches]);
 
+  console.log("matches =", matches);
 
   return (
     <Fragment>
-      <div className={`mt-5 mb-2  ${styles['filter-btn-container']}`}>
+      <div className={`mt-5 mb-2  ${styles["filter-btn-container"]}`}>
         <button
           className={`d-flex btn btn-success  ${styles["filter-btn"]}`}
           onClick={filterButtonHandler}
@@ -35,11 +36,11 @@ const ModalTest = ({children , onFilter}) => {
         </button>
       </div>
       <Row className="mt-lg-5">
-        {isShowfilter && <FilterBox onClose={onCloseHandler} onFilter={onFilter}/>}
-
-        {matches && <FilterBox   onFilter={onFilter}/>}
+        {/* {isShowfilter && <FilterBox onClose={onCloseHandler} onFilter={onFilter}/>} */}
+        <FilterBox className={`${isShowfilter ? '' : styles['hide-filterbox']}`} onClose={onCloseHandler} onFilter={onFilter}/>
+        {matches && <FilterBox onFilter={onFilter} />}
         <div className="product-items border border-1 border-danger col-12 col-lg-10 px-0s">
-         {children}
+          {children}
         </div>
       </Row>
     </Fragment>
