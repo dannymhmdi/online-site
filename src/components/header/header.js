@@ -128,7 +128,7 @@ const Header = () => {
           className={`${
             state.shopBasket.length === 0 ? styles["shop-container-empty"] : ""
           } ${styles["shop-container"]} ${
-            state.shopBasket.length > 3 ? styles["shop-container-overflow"] : ""
+            state.shopBasket.length > 2 ? styles["shop-container-overflow"] : ""
           } col-10 col-md-7`}
         >
           <div className="text-secondary fs-6 mb-2">
