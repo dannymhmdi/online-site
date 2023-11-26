@@ -6,7 +6,7 @@ const MainLayout = ({children}) => {
   return (
     <Fragment>
       <Header />
-      <main>{children}</main>
+      <main style={{marginTop:'145px'}}>{children}</main>
       <Footer/>
     </Fragment>
   );
